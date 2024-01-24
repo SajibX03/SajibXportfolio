@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .greeting {
+            font-size: 36px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting"> Your Request Has Been Submited </div>
+
+    <script>
+        // JavaScript to remove the greeting after a delay
+        setTimeout(function() {
+            var greetingElement = document.querySelector('.greeting');
+            greetingElement.style.display = 'none';
+        }, 5000); // Hide the greeting after 5 seconds
+    </script>
+</body>
+</html>
